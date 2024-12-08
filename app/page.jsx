@@ -81,7 +81,7 @@ const page = () => (
 
 
     <div className='flex justify-center items-center mt-12'>
-      <button className='more'>SHOW MORE</button></div>
+      <button className='more hover transition-[.5s]'>SHOW MORE</button></div>
 
 
     <div className='w-[100%] h-[40rem] bg-[#FCF8F3] flex mt-32 banner-two-main-container'>
@@ -96,9 +96,9 @@ const page = () => (
         </div>
       </div>
       <div className='w-[65%] h-[100%] bg-[#FCF8F3] banner-two-two  flex gap-[2.5rem]'>
-        <Image src={banner2p1} className='w-[25rem] ' />
-        <Image src={banner2p2} className='w-[24rem] h-[36rem] ghyb2' />
-        <Image src={banner2p3} className='w-[22rem] h-[32rem] ghyb' />
+        <Image src={banner2p1} className='w-[25rem] hover start transition-[.5s]' />
+        <Image src={banner2p2} className='w-[24rem] h-[36rem] ghyb2 hover start transition-[.5s]' />
+        <Image src={banner2p3} className='w-[22rem] h-[32rem] ghyb hover start transition-[.5s]' />
         <Image src={banner2p4} className='h-[28rem] ghyb' />
       </div>
     </div>

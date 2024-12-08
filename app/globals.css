@@ -188,6 +188,16 @@ font-size: 2rem;
 padding: 0.8rem 1.2rem 0.8rem 1.2rem;
 color: #9F9F9F;
 }
+.cardhover:hover{
+  width: 28.5rem;
+  height: 44.6rem;
+  color: ;
+
+}
+.card-main-container.hovered {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* w-[28.5rem] h-[44.6rem] */
 
 /* break points  */
 @media(max-width : 999px){
@@ -562,7 +572,7 @@ font-size: 3.6rem;
     width: 90%;
     background-color: #FCF8F3;
     padding-top: 3rem;
-    align-items: center;
+
   }
   .banner-two-two{
     display: grid;
@@ -572,7 +582,6 @@ font-size: 3.6rem;
     padding-left: 5rem;
     margin-top: 2rem;
   }
-  .nechy{
-    margin-top: 4rem;
-  }
+ 
+
 }

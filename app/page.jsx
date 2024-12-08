@@ -4,7 +4,15 @@ import Image from 'next/image'
 import imagep21 from './assets/imagep21.png'
 import imagep22 from './assets/image22.png'
 import imagep23 from './assets/imagw23.png'
-import cardimage1 from './assets/cardimg1.png'
+import cardimage1 from './assets/image1C.png'
+import cardimage2 from './assets/cardimage2.png'
+import cardimage3 from './assets/cardimage3.png'
+import cardimage4 from './assets/cardimage4.png'
+import cardimage6 from './assets/cardimage6.png'
+import cardimage7 from './assets/cardimage7.png'
+
+import cardimage9 from './assets/cardimage9.png'
+
 import Card from './Component/Card/Card'
 import banner2p1 from './assets/banner2p1.png'
 import banner2p2 from './assets/banner2p2.png'
@@ -21,6 +29,15 @@ import collage7 from './assets/collage7.png'
 import collage8 from './assets/collage8.png'
 import collage9 from './assets/collage9.png'
 
+import mens from './assets/mens.png'
+import women from './assets/womens.png'
+import acc from './assets/acc.png'
+import dis from './assets/dis.png'
+
+
+
+
+
 
 const page = () => (
   <>
@@ -34,12 +51,12 @@ const page = () => (
 
 
     <div className='flex justify-center gap-12 mt-16  main-page-two-container'>
-      <div className='flex flex-col items-center justify-center flex-wrap part-2-image'><Image src={imagep21} className='img2' />
+      <div className='flex flex-col items-center justify-center flex-wrap part-2-image kuch  hover'><Image src={imagep21} className='img2' />
         <h1>DINING</h1>
       </div>
-      <div className='flex flex-col items-center justify-center part-2-image'><Image src={imagep22} className="img2" />
+      <div className='flex flex-col items-center justify-center part-2-image kuch hover'><Image src={imagep22} className="img2" />
         <h1>LIVING</h1>
-      </div>  <div className='flex flex-col items-center justify-center part-2-image'><Image src={imagep23} className="img2" />
+      </div>  <div className='flex flex-col items-center justify-center part-2-image kuch hover'><Image src={imagep23} className="img2" />
         <h1>BEDROOM</h1>
       </div>
     </div>
@@ -47,16 +64,17 @@ const page = () => (
     <h1 className='products'>Our Products</h1>
     <div className='main-all-card-container flex  justify-center gap-11 mt-16'>
 
-      <Card src={cardimage1} title="Grifo" description="High Lamp" price="2,000.000" cutprice="4,000.0000" />
-      <Card src={cardimage1} title="Grifo" description="High Lamp" price="2,000.000" cutprice="4,000.0000" />
-      <Card src={cardimage1} title="Grifo" description="High Lamp" price="2,000.000" cutprice="4,000.0000" />
-      <Card src={cardimage1} title="Grifo" description="High Lamp" price="2,000.000" cutprice="4,000.0000" />
+    <Card id="1" src={cardimage1} title="Grifo" description="High Lamp" price="44,000.000" cutprice="48,000.0000" />
+      <Card id="2" src={cardimage2} title="Syltherine" description="Stylish Camp" price="5,000.000" cutprice="7,000.0000" />
+      <Card id="3" src={cardimage3} title="Leviosa" description="Lorem Ipsum" price="10,000.000" cutprice="12,000.0000" />
+      <Card id="4" src={cardimage4} title="Lolita" description="Luxury Big Sofa" price="20,000.000" cutprice="23,000.0000" />
+
     </div>
     <div className='main-all-card-container flex  justify-center gap-11 mt-12'>
-      <Card src={cardimage1} title="Grifo" description="High Lamp" price="2,000.000" cutprice="4,000.0000" />
-      <Card src={cardimage1} title="Grifo" description="High Lamp" price="2,000.000" cutprice="4,000.0000" />
-      <Card src={cardimage1} title="Grifo" description="High Lamp" price="2,000.000" cutprice="4,000.0000" />
-      <Card src={cardimage1} title="Grifo" description="High Lamp" price="2,000.000" cutprice="4,000.0000" />
+      <Card id="5" src={cardimage1} title="Grifo" description="High Lamp" price="44,000.000" cutprice="48,000.0000" />
+      <Card id="6" src={cardimage6} title="Muggo" description="Small Mug" price="200,000.000" cutprice="300,000.0000" />
+      <Card id="7" src={cardimage7} title="Pinky" description="Cute bed set" price="50,000.000" cutprice="44,000.0000" />
+      <Card id="8" src={cardimage9} title="Potty" description="Flower pot" price="20,000.000" cutprice="40,000.0000" />
 
     </div>
 
@@ -140,53 +158,9 @@ const page = () => (
 
 {/* footer  */}
 
-<div  className='w-[100%] h-[40rem] flex justify-center items-center gap-[12rem] footer-main-container'>
-
-
-<div className='flex flex-col gap-[6rem] h-[100%] justify-start mt-[20rem]'>
-  <ul>
-    <li className='foot-logo'>Funiro</li>
-    <li className='paraa'>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Voluptatum?</li>
-
-  </ul>
-</div>
-
-<div className=' h-[100%] justify-center mt-[20rem]'>
-  <ul className='flex flex-col gap-[6rem]'>
-    <li className='paraa'>Links</li>
-    <li className='lists'>HOME</li>
-    <li className='lists'>SHOP</li>
-    <li className='lists'>ABOUT</li>
-    <li className='lists'>CONTACT</li>
-    
- </ul>
-</div>
 
 
 
-<div className=' h-[100%] justify-center mt-[20rem]'>
-  <ul className='flex flex-col gap-[6rem]'>
-    <li className='paraa'>Links</li>
-    <li className='lists'>Payment Options</li>
-    <li className='lists'>Returns</li>
-    <li className='lists'>Privacy Policies</li>
-
-    
- </ul>
-</div>
-
-
-<div className=' h-[100%] justify-center mt-[20rem]'> 
-  <ul className='flex flex-col gap-[4rem]'>
-    <li className='paraa'>News Letters</li>
-    <li><input type="text" placeholder='Enter Your Email Address' className='field' /></li>
-    
- </ul>
-</div>
-
-
-
-</div>
 
 
 

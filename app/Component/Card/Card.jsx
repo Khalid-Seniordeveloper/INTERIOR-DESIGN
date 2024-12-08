@@ -3,7 +3,7 @@ import React from 'react'
 
 const Card = (props) => {
   return (
-<div className='w-[28.5rem] h-[44.6rem] card-main-container'>
+<div className='w-[28.5rem] h-[44.6rem] card-main-container hover '>
 
 <div>
   <Image src={props.src}/>

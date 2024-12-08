@@ -99,6 +99,7 @@ width: 85%;
 }
 .card-main-container{
   background-color: #F4F5f7;
+  transition: .5s;
 }
 .detail-container h1{
  font-weight: 600;
@@ -150,16 +151,43 @@ font-size: 1.3rem;
   padding: 1.2rem 2.8rem;
 
 }
+.footer-main-container{
+  margin-top: 5rem;
+  border-top: 1px solid  black;
+}
+.kuch{
+  transition: .5s;
+}
 
+/* shop styling  */
 
+.titleshop{
+  font-weight: 500;
+  font-size: 4.8rem;
+}
+.shop-one-container h1{
+font-weight: 400;
+font-size: 2rem;
+}
 
-
-
-
-
-
-
-
+.line{
+  color: black;
+}
+.shop-one-container h2{
+  font-weight: 400;
+  font-size: 1.6;
+  }
+.shop-two-container h1{
+font-weight: 400;
+font-size: 2rem;
+}
+.btn button{
+  background-color: white;
+  font-weight: 400;
+  font-size: 1.3rem;
+padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+color: #9F9F9F;
+}
 
 /* break points  */
 @media(max-width : 999px){
@@ -207,7 +235,11 @@ font-size: 1.3rem;
 .col-2 {
   flex: 0 0 20%; 
 }
-
+.name{
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: red;
+}
 .col-6 {
   flex: 0 0 50%; 
 }
@@ -215,7 +247,10 @@ font-size: 1.3rem;
 .col-8 {
   flex: 0 0 66.6666666667%; 
 }
-
+.hover:hover{
+cursor: pointer;
+box-shadow: 10px 10px 10px gray;
+}
 .img-fluid {
   max-width: 100%;
   height: auto; 
@@ -248,15 +283,94 @@ font-size: 1.3rem;
   font-size: 1.6rem;
   font-weight: 400;
 }
+.shop-description h1{
+  font-weight: 600;
+  font-size: 2rem;
+}
+.shop-description p{
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #898989;
+}
 .field{
   width: 20rem;
-padding: 0.5rem;
+padding: 2rem;
 border-top: 0;
 border-left: 0;
 border-right: 0;
 border-bottom: 1px solid black;
+height: 5.5rem;
+}
+.field-t{
+  width: 40rem;
+  padding: 2rem;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border: 1px solid black;
+  height: 14rem;
+}
+.next{
+  font-weight: 300;
+  font-size: 2rem;
+}
+.touch h2{
+font-weight: 600;
+font-size: 3.6rem;
+}
+.sub-contact{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding-right: 12rem;
+  gap: 5rem;
+
+ 
+}
+.subscribe{
+  color: white;
+  font-weight: 400;
+  background-color: #B88E2F;
+  font-size: 1.6rem;
+  padding: 0.5rem 5rem;
+}
+.field-name{
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.field{
+  border: 1px solid  black;
+  padding: 1.5rem;
+  width: 40rem;
 }
 
+.fieldf{
+  border-bottom: 1px solid  black;
+  padding: 1.5rem;
+  width: 20rem;
+}
+.sub-contact-one{
+  width: 50%;
+}
+.sub-contact-one h1{
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+.sub-contact-one div{
+  margin-right: 1rem;
+}
+.sub-contact-one h1 span{
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.touch p{
+  font-weight: 400;
+  font-size: 1.6rem;
+  }
+
+  .showw{
+    font-size: 1.7rem;
+  }
 @media(max-width : 700px){
   html{
     font-size: 52%;
@@ -284,6 +398,10 @@ border-bottom: 1px solid black;
     gap: 10rem;
     padding-right: 8rem;
   }
+  .promote-container{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+  }
   .content1{
     width: 30%;
     height: 10rem;
@@ -307,6 +425,12 @@ border-bottom: 1px solid black;
     grid-template-columns: repeat(2 , 1fr);
     padding: 10rem;
   }
+  .sub-contact-one{
+    width: 100%;
+  }
+  .sub-contact{
+    padding-right: 0;
+  }
 }
 @media(max-width : 400px){
   html{
@@ -320,8 +444,28 @@ border-bottom: 1px solid black;
     grid-template-columns: repeat(1 , 1fr);
 
   }
+  .main-sub-contact{
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+
+  }
+  .orneechy{
+    margin-top: 60rem;
+  }
+  .sub-contact{
+    padding-left: 4rem;
+    width: 100%;
+  }
+  .field-container{
+    width: 100%;
+    padding-left: 2rem;
+    margin-top: 8rem;
+  }
   .img2{
     width: 90%;
+  }
+  .last{
+    margin-bottom: -12rem;
   }
   .icon-div{
     display: block;
@@ -339,6 +483,12 @@ border-bottom: 1px solid black;
     overflow: hidden;
     
      
+  }
+  .promote-container{
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    padding: 3rem;
+    height: 52rem;
   }
 
   .one{
@@ -366,12 +516,32 @@ border-bottom: 1px solid black;
     width: 90%;
 
   }
+  .main-shop-container{
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);  }
+ .shop-one-container{
+   padding : 0;
+   justify-content: center;
+  width: 100%;
+}
+.shop-two-container{
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.8rem;
+  background-color: #F9F1E7;
+}
+  .foter-list{
+    height: 70%;
+    margin-top: -4rem;
+  }
   .footer-main-container{
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
     gap: 0;
     padding-left: 2rem;
+    /* height: 30rem; */
   }
+
   .college{
     margin-top: 70rem;
   }
@@ -401,5 +571,8 @@ border-bottom: 1px solid black;
     /* margin-left: 8rem; */
     padding-left: 5rem;
     margin-top: 2rem;
+  }
+  .nechy{
+    margin-top: 4rem;
   }
 }

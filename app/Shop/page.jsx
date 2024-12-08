@@ -53,7 +53,7 @@ const Shop = () => {
 </div>
 
 {/* cards  */}
-<div className='main-all-card-container flex  justify-center gap-11 mt-16 nechy'>
+<div className='main-all-card-container flex  justify-center gap-11 mt-16 nechy bht'>
 
 <Card id="1" src={cardimage6} title="Grifo" description="High Lamp" price="44,000.000" cutprice="48,000.0000" />
   <Card id="2" src={cardimage7} title="Syltherine" description="Stylish Camp" price="5,000.000" cutprice="7,000.0000" />

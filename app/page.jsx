@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Banner from './Component/Banner/Banner'
 import Image from 'next/image'
@@ -33,22 +34,18 @@ import mens from './assets/mens.png'
 import women from './assets/womens.png'
 import acc from './assets/acc.png'
 import dis from './assets/dis.png'
-
-
-
-
-
-
+import ProductCards from './Product/page'
 const page = () => (
   <>
     <Banner />
+
 
     <h1 className='text-center range text-[2.5rem] mt-20'>Browse The Range</h1>
     <p className='text-center para'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, consectetur.</p>
 
 
 
-
+<ProductCards/>
 
     <div className='flex justify-center gap-12 mt-16  main-page-two-container'>
       <div className='flex flex-col items-center justify-center flex-wrap part-2-image kuch  hover'><Image src={imagep21} className='img2' />
@@ -131,40 +128,19 @@ const page = () => (
       <div className='w-[20%] h-[100%] flex justify-center items-center'>
         <Image src={collage5} className='five'/>
       </div>
-
-
-
       <div className='w-[40%] h-[100%]'>
-
 {/* pehli div */}
 <div className='w-[100%] h-[50%]  flex gap-[8%] justify-end'>
   <Image src={collage6} className='w-[50%] h-[85%] mt-11'/>
   <Image src={collage8} className='w-[35%] h-[95%]'/>
-
 </div>
 <div className='w-[100%] h-[50]  flex gap-[5%]'>
-
 <Image src={collage7} className='h-[70%] w-[35%] ml-8'/>
 <Image src={collage9} className='h-[55%] w-[50%]' />
-
-
 </div>
-
       </div>
-
     </div>
-
-
-
 {/* footer  */}
-
-
-
-
-
-
-
-
   </>
 )
 

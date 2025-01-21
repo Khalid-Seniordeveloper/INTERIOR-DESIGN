@@ -29,7 +29,7 @@ const Navbar = () => {
         <ul className='list-none text-[1.7rem] flex items-center gap-[5.8rem]'>
           <li><Link href='/'>Home</Link></li>
           <li><Link href={'/Shop'}>Shop</Link></li>
-          <li><Link href={'/blogs'}>Blog</Link></li>
+          <li><Link href={'/Blog'}>Blog</Link></li>
           <li><Link href={'/Contact'}>Contact</Link></li>
         </ul>
       </div>
@@ -37,10 +37,10 @@ const Navbar = () => {
  
       <div>
         <ul className='flex items-center gap-[4rem] logo-div'>
-          <li><Image src={icon1} className='w-[2rem]' /></li>
+          <li><Link href="/login"><Image src={icon1} className='w-[2rem]' /></Link></li>
           <li><Image src={icon2} className='w-[2rem]' /></li>
           <li><Image src={icon3} className='w-[2rem]' /></li>
-          <li><Image src={icon4} className='w-[2rem]' /></li>
+          <li><Link href="/Cart"><Image src={icon4} className='w-[2rem]' /></Link></li>
         </ul>
       </div>
 

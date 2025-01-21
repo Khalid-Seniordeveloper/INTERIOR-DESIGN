@@ -13,8 +13,8 @@ const sanity = createClient({
 });
 
 const ProductCards = ({ selectedPrice }) => {
-  const [products, setProducts] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
+  const [displayProducts, setDisplayProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 12;
@@ -34,7 +34,6 @@ const ProductCards = ({ selectedPrice }) => {
       `;
       const data = await sanity.fetch(query);
       setAllProducts(data);
-      setProducts(data);
       setLoading(false);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -50,17 +49,20 @@ const ProductCards = ({ selectedPrice }) => {
     const filteredProducts = selectedPrice
       ? allProducts.filter(product => product.price <= Number(selectedPrice))
       : allProducts;
-    setProducts(filteredProducts.slice(0, productsPerPage));
-    setCurrentPage(1);  // Reset to the first page when filtering
+    setCurrentPage(1);  // Reset to the first page when applying filters
+    setDisplayProducts(filteredProducts);
   }, [selectedPrice, allProducts]);
 
-  const totalPages = Math.ceil(products.length / productsPerPage);
+  const totalPages = Math.ceil(displayProducts.length / productsPerPage);
+
+  const paginatedProducts = displayProducts.slice(
+    (currentPage - 1) * productsPerPage,
+    currentPage * productsPerPage
+  );
 
   const handlePageChange = (page) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
-      const startIndex = (page - 1) * productsPerPage;
-      setProducts(allProducts.slice(startIndex, startIndex + productsPerPage));
     }
   };
 
@@ -73,7 +75,7 @@ const ProductCards = ({ selectedPrice }) => {
       ) : (
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
-            {products.map((product) => (
+            {paginatedProducts.map((product) => (
               <div key={product._id} className="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
                 <Link href={`/product/${product._id}`} legacyBehavior>
                   <a className="block">

@@ -45,7 +45,7 @@ const Shop = () => {
           <h1>Price Check</h1>
           <div className='btn flex justify-center items-center'>
             <select
-              className="p-2 border rounded text-[2rem]"
+              className="p-2 border rounded text-[1.5rem]"
               onChange={(e) => handlePriceFilterChange(e.target.value)}
             >
               <option value="">Select Price</option>

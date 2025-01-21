@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect, useState } from "react";
 import createClient from "@sanity/client";
-import Image from "next/image";
 import Link from "next/link";
 import Card from '../Component/Card/Card';
 
@@ -12,9 +11,8 @@ const sanity = createClient({
   useCdn: true,
 });
 
-const ProductCards = ({ selectedPrice }) => {
+const ProductCards = () => {
   const [allProducts, setAllProducts] = useState([]);
-  const [displayProducts, setDisplayProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 12;
@@ -45,17 +43,9 @@ const ProductCards = ({ selectedPrice }) => {
     fetchProducts();
   }, []);
 
-  useEffect(() => {
-    const filteredProducts = selectedPrice
-      ? allProducts.filter(product => product.price <= Number(selectedPrice))
-      : allProducts;
-    setCurrentPage(1);  // Reset to the first page when applying filters
-    setDisplayProducts(filteredProducts);
-  }, [selectedPrice, allProducts]);
+  const totalPages = Math.ceil(allProducts.length / productsPerPage);
 
-  const totalPages = Math.ceil(displayProducts.length / productsPerPage);
-
-  const paginatedProducts = displayProducts.slice(
+  const paginatedProducts = allProducts.slice(
     (currentPage - 1) * productsPerPage,
     currentPage * productsPerPage
   );
@@ -92,7 +82,7 @@ const ProductCards = ({ selectedPrice }) => {
             ))}
           </div>
 
-          {/* Custom Pagination */}
+          {/* Pagination */}
           <div className="flex justify-center mt-20 gap-14">
             {Array.from({ length: totalPages }, (_, i) => (
               <div

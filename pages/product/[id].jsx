@@ -7,6 +7,7 @@ import { Star } from 'lucide-react';
 import { createClient } from '@sanity/client';
 import Navbar from '../../app/Component/Navbar/Navbar';
 import shopbanner from '../../app/assets/shopbanner.png';
+import ProductCardsRelated from '../../app/ProductCardRelated/page';
 
 // Sanity client configuration
 const sanity = createClient({
@@ -121,7 +122,7 @@ const ProductPage = ({ product }) => {
           <div className="space-y-10">
             <h1 className="text-5xl font-bold">{product?.title}</h1>
             <div>
-              <p className="text-4xl font-medium">Rs. {product?.price}</p>
+              <p className="text-4xl mt-[-1rem] mb-[1rem] font-medium">Rs. {product?.price}</p>
               <div className="flex items-center gap-4">
                 {renderStars()}
                 <span className="text-2xl text-gray-600">{product?.reviews} Customer Review</span>
@@ -131,7 +132,7 @@ const ProductPage = ({ product }) => {
             <p className="text-xl text-gray-700">{product?.description}</p>
 
             <div>
-              <p className="text-xl font-semibold">Size</p>
+              <p className="text-3xl mb-[1rem] font-semibold">Size</p>
               <div className="flex gap-6">
                 {sizes.map((size) => (
                   <button
@@ -150,7 +151,7 @@ const ProductPage = ({ product }) => {
             </div>
 
             <div>
-              <p className="text-xl font-semibold">Color</p>
+              <p className="text-3xl mb-[1rem] font-semibold">Color</p>
               <div className="flex gap-6">
                 {colors.map(({ id, bg }) => (
                   <button
@@ -181,14 +182,24 @@ const ProductPage = ({ product }) => {
                 </button>
               </div>
 
-              <button
+       
+            </div>
+            <div className='flex gap-[2rem] flex-wrap'>
+             <button
                 onClick={handleAddToCart}
                 className="px-10 py-5 bg-black text-white text-3xl rounded-lg hover:bg-gray-800"
               >
                 Add To Cart
               </button>
-            </div>
-
+              
+            <Link href='/Cart'>
+            <button
+                className="px-10 py-5 bg-black text-white text-3xl rounded-lg hover:bg-gray-800"
+              >
+                Checkout Cart
+              </button>
+            </Link>
+             </div>
             <div className="border-t pt-6 space-y-4 text-xl text-gray-600">
               <div className="flex gap-4">
                 <span>SKU:</span>
@@ -213,6 +224,13 @@ const ProductPage = ({ product }) => {
             </div>
           </div>
         </div>
+ <h1 className='text-center range text-[2.5rem] mt-[2rem]'>Related Products</h1>
+ 
+        <div className='main-all-card-container-api flex  justify-center gap-11 mt-12'>
+  
+  <ProductCardsRelated/>
+  </div>
+
       </main>
     </div>
   );

@@ -57,14 +57,15 @@ const ProductCards = () => {
   };
 
   return (
-    <main>
+    <main className="p-4">
+
       {loading ? (
-        <div className="flex justify-center items-center h-[100vh]">
-          <div className="animate-spin rounded-full border-t-4 border-blue-500 h-24 w-24"></div>
+        <div className="flex justify-center items-center h-screen">
+          <div className="animate-spin rounded-full border-t-4 border-blue-500 h-16 w-16"></div>
         </div>
       ) : (
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {paginatedProducts.map((product) => (
               <div key={product._id} className="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
                 <Link href={`/product/${product._id}`} legacyBehavior>
@@ -83,28 +84,26 @@ const ProductCards = () => {
           </div>
 
           {/* Pagination */}
-          <div className="flex justify-center mt-20 gap-14">
+          <div className="flex flex-wrap justify-center mt-10 gap-4 sm:gap-6">
             {Array.from({ length: totalPages }, (_, i) => (
-              <div
+              <button
                 key={i + 1}
                 onClick={() => handlePageChange(i + 1)}
-                className={`w-[5rem] h-[5rem] rounded-[1rem] flex justify-center items-center transition-[.5s] cursor-pointer ${
-                  currentPage === i + 1 ? 'bg-[#B88E2F]' : 'bg-[#F9F1E7]'
-                }`}
+                className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex justify-center items-center transition duration-300 cursor-pointer shadow-md text-base md:text-lg 
+                  ${currentPage === i + 1 ? 'bg-[#B88E2F] text-white' : 'bg-[#F9F1E7] text-black hover:bg-[#E6D6B0]'}`}
               >
-                <h1 className={`text-4xl ${currentPage === i + 1 ? 'text-white' : 'text-black'}`}>
-                  {i + 1}
-                </h1>
-              </div>
+                {i + 1}
+              </button>
             ))}
-            <div
+            <button
               onClick={() => handlePageChange(currentPage + 1)}
-              className={`w-[8rem] h-[5rem] bg-[#F9F1E7] rounded-[1rem] flex justify-center items-center transition-[.5s] cursor-pointer ${
-                currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : ''
-              }`}
+              disabled={currentPage === totalPages}
+              className={`w-20 h-10 sm:w-24 sm:h-12 rounded-lg flex justify-center items-center transition duration-300 cursor-pointer shadow-md text-base md:text-lg 
+                bg-[#F9F1E7] text-black hover:bg-[#E6D6B0] 
+                ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
-              <h1 className="text-4xl text-black next">Next</h1>
-            </div>
+              Next
+            </button>
           </div>
         </div>
       )}

@@ -59,8 +59,10 @@ const Navbar = () => {
           <ul className='text-white text-[1.7rem] mt-4'>
             <li className='mb-4'><Link href='/'>Home</Link></li>
             <li className='mb-4'><Link href={'/Shop'}>Shop</Link></li>
-            <li className='mb-4'><Link href={'/blogs'}>Blog</Link></li>
+            <li className='mb-4'><Link href={'/Blog'}>Blog</Link></li>
             <li className='mb-4'><Link href={'/Contact'}>Contact</Link></li>
+            <li className='mb-4'><Link href={'/Cart'}>Cart</Link></li>
+
           </ul>
         </div>
       )}

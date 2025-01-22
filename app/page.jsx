@@ -44,9 +44,9 @@ const page = () => (
     <p className='text-center para'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, consectetur.</p>
 
 
+<div>
 
-<ProductCards/>
-
+</div>
     <div className='flex justify-center gap-12 mt-16  main-page-two-container'>
       <div className='flex flex-col items-center justify-center flex-wrap part-2-image kuch  hover'><Image src={imagep21} className='img2' />
         <h1>DINING</h1>
@@ -59,22 +59,12 @@ const page = () => (
     </div>
 
     <h1 className='products'>Our Products</h1>
-    <div className='main-all-card-container flex  justify-center gap-11 mt-16'>
-
-    <Card id="1" src={cardimage1} title="Grifo" description="High Lamp" price="44,000.000" cutprice="48,000.0000" />
-      <Card id="2" src={cardimage2} title="Syltherine" description="Stylish Camp" price="5,000.000" cutprice="7,000.0000" />
-      <Card id="3" src={cardimage3} title="Leviosa" description="Lorem Ipsum" price="10,000.000" cutprice="12,000.0000" />
-      <Card id="4" src={cardimage4} title="Lolita" description="Luxury Big Sofa" price="20,000.000" cutprice="23,000.0000" />
-
-    </div>
-    <div className='main-all-card-container flex  justify-center gap-11 mt-12'>
-      <Card id="5" src={cardimage1} title="Grifo" description="High Lamp" price="44,000.000" cutprice="48,000.0000" />
-      <Card id="6" src={cardimage6} title="Muggo" description="Small Mug" price="200,000.000" cutprice="300,000.0000" />
-      <Card id="7" src={cardimage7} title="Pinky" description="Cute bed set" price="50,000.000" cutprice="44,000.0000" />
-      <Card id="8" src={cardimage9} title="Potty" description="Flower pot" price="20,000.000" cutprice="40,000.0000" />
-
-    </div>
-
+ 
+  
+<div className='main-all-card-container-api flex  justify-center gap-11 mt-12'>
+  
+  <ProductCards/>
+  </div>
 
 
     <div className='flex justify-center items-center mt-12'>

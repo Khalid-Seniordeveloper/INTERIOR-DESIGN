@@ -21,7 +21,7 @@ const Navbar = () => {
     <div className='w-full h-36 main-container justify-center items-center flex gap-64'>
 
       <div className='flex items-center'>
-        <Image src={logo} className='w-60' />
+        <Image src={logo} className='w-60' alt='Logo'/>
       </div>
 
 

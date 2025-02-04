@@ -196,7 +196,7 @@ const ProductPage = ({ product }) => {
             <button
                 className="px-10 py-5 bg-black text-white text-3xl rounded-lg hover:bg-gray-800"
               >
-                Checkout Cart
+                Go To Cart 
               </button>
             </Link>
              </div>
